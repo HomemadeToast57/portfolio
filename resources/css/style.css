@@ -22,6 +22,16 @@
   box-sizing: border-box;
 }
 
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 html {
   background-color: var(--background-color);
   font-size: 16px;
@@ -102,4 +112,14 @@ html {
     width: 100%;
     margin: 0px;
   }
+}
+
+.dark-mode-div {
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  bottom: 30px;
+  height: 90px;
+  width: 40px;
+  color: var(--text-color);
 }
