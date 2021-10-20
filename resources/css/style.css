@@ -9,7 +9,7 @@
 html {
   background-color: #eeeff1;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 814px) {
@@ -30,17 +30,35 @@ html {
   position: relative;
   display: block;
 
-  animation: rotation 1s infinite linear;
+  
 }
 
 .color-blob {
   position: absolute;
 
   left: -150px;
-  top: -100px;
+  top: -250px;
   z-index: -5;
   height: 1200px;
   width: auto;
+  
+  
+  -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
 }
 
 .intro-text {
