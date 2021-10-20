@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="resources/css/nav.css" />
     <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="stylesheet" href="resources/css/dark-mode-switch.css" />
+
     <title>Jack Singer</title>
   </head>
 
@@ -42,7 +44,18 @@
     </header>
 
     <div class="dark-mode-div">
-      <button id="dark-mode-button" onclick="change()">Dark</button>
+      <button
+        id="dark-mode-button"
+        class="container"
+        aria-label="Toggle color mode"
+        title="Toggle color mode"
+      >
+        <div class="sun visible"></div>
+        <div class="moon">
+          <div class="star"></div>
+          <div class="star small"></div>
+        </div>
+      </button>
     </div>
 
     <div class="content">

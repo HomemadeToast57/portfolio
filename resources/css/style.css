@@ -124,12 +124,4 @@ html {
   }
 }
 
-.dark-mode-div {
-  position: fixed;
-  z-index: 100;
-  left: 20px;
-  bottom: 30px;
-  height: 90px;
-  width: 40px;
-  color: var(--text-color);
-}
+
