@@ -6,6 +6,7 @@
   --text-color: #000000;
   --secondary-text-color: #62646d;
   --background-color-alpha: #eeeff1EE;
+  transition: all .5s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .dark-mode {
@@ -14,6 +15,7 @@
   --text-color: #ffffff;
   --secondary-text-color: #c9c9c9;
   --background-color-alpha: #3f3f41EE;
+  transition: all .5s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 html {
@@ -74,7 +76,7 @@ a {
 }
 
 .nav-logo, .nav-logo:visited {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     font-weight: 400;
     color: var(--text-color);
 }
