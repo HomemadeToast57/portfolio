@@ -20,7 +20,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
 }
 
 .hamburger {
@@ -44,11 +44,11 @@ a {
 }
 
 .nav-item {
-    margin-left: 5rem;
+    margin-left: 3rem;
 }
 
 .nav-link{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #000000;
 }
@@ -73,6 +73,13 @@ a {
 
 .logo {
     height: 60px;
+}
+
+.view-work-link {
+    background-color: #000000;
+    padding: 10px;
+    color: #eeeff1ee;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 768px) {
