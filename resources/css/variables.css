@@ -1,0 +1,21 @@
+.light-mode {
+  --background-color: #eeeff1;
+  --secondary-color: #3f3f41;
+  --text-color: rgb(26, 28, 32);
+  --secondary-text-color: #62646d;
+  --background-color-alpha: #eeeff1ee;
+  --button-color: rgb(26, 28, 32);
+  --hover: #353535;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode {
+  --background-color: #0d0d0d;
+  --secondary-color: #eeeff1;
+  --text-color: #ffffff;
+  --secondary-text-color: #dfdfdf;
+  --background-color-alpha: #3f3f41ee;
+  --button-color: var(--text-color);
+  --hover: #cbcbcb;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
