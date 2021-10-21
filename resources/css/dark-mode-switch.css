@@ -1,23 +1,26 @@
 .light-mode {
   --background-color: #eeeff1;
   --secondary-color: #3f3f41;
-  --text-color: #000000;
+  --text-color: rgb(26, 28, 32);
   --secondary-text-color: #62646d;
-  --background-color-alpha: #eeeff1EE;
-  transition: all .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+  --background-color-alpha: #eeeff1ee;
+  --button-color: rgb(26, 28, 32);
+  --hover: #353535;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dark-mode {
-  --background-color: #3f3f41;
+  --background-color: #000;
   --secondary-color: #eeeff1;
   --text-color: #ffffff;
-  --secondary-text-color: #c9c9c9;
-  --background-color-alpha: #3f3f41EE;
-  transition: all .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+  --secondary-text-color: #dfdfdf;
+  --background-color-alpha: #3f3f41ee;
+  --button-color: var(--text-color);
+  --hover: #cbcbcb;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
-
   width: 46px;
 
   height: 46px;
@@ -37,11 +40,9 @@
   align-items: center;
 
   position: relative;
-
 }
 
 .sun {
-
   width: 50%;
 
   height: 50%;
@@ -59,21 +60,14 @@
   /*  white transparent for Safari  */
 
   background: radial-gradient(
-
     circle,
-
     var(--text-color),
-
     rgba(0, 0, 0, 0) 50%,
-
     var(--text-color) 50%
-
   );
-
 }
 
 .sun:before {
-
   content: "";
 
   position: absolute;
@@ -85,25 +79,17 @@
   height: 100%;
 
   background: radial-gradient(
-
     circle,
-
     var(--text-color) 30%,
-
     rgba(0, 0, 0, 0) 31%,
-
     rgba(0, 0, 0, 0) 50%,
-
     var(--text-color) 50%
-
   );
 
   transform: rotate(45deg);
-
 }
 
 .sun.visible {
-
   pointer-events: auto;
 
   opacity: 1;
@@ -111,11 +97,9 @@
   transform: scale(1) rotate(180deg);
 
   transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-
 }
 
 .moon {
-
   width: 50%;
 
   height: 50%;
@@ -139,11 +123,9 @@
   transform: scale(0.3) rotate(65deg);
 
   transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-
 }
 
 .moon.visible {
-
   pointer-events: auto;
 
   opacity: 1;
@@ -151,11 +133,9 @@
   transform: scale(1) rotate(0deg);
 
   transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-
 }
 
 .star {
-
   position: absolute;
 
   top: 25%;
@@ -179,11 +159,9 @@
   opacity: 0;
 
   transition: all 0.2s ease-in 0.4s;
-
 }
 
 .star:before {
-
   border-bottom: 5px solid #f0f0f0;
 
   border-left: 3px solid rgba(0, 0, 0, 0);
@@ -205,11 +183,9 @@
   content: "";
 
   transform: rotate(-35deg);
-
 }
 
 .star:after {
-
   position: absolute;
 
   display: block;
@@ -233,17 +209,13 @@
   transform: rotate(-70deg);
 
   content: "";
-
 }
 
 .moon.visible .star {
-
   opacity: 0.8;
-
 }
 
 .star.small {
-
   transform: scale(0.35) rotate(35deg);
 
   position: relative;
@@ -255,15 +227,12 @@
   opacity: 0;
 
   transition: all 0.2s ease-in 0.45s;
-
 }
 
 .moon.visible .star.small {
-
   opacity: 0.7;
 
   transform: scale(0.45) rotate(35deg);
-
 }
 
 .dark-mode-div {
@@ -274,5 +243,4 @@
   height: 90px;
   width: 40px;
   color: var(--text-color);
-  
 }

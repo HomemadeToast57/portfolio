@@ -3,10 +3,11 @@
 .light-mode {
   --background-color: #eeeff1;
   --secondary-color: #3f3f41;
-  --text-color: #000000;
+  --text-color: rgb(26, 28, 32);
   --secondary-text-color: #62646d;
   --background-color-alpha: #eeeff1ee;
-  --button-color: rgb(26, 27, 31);
+  --button-color: rgb(26, 28, 32);
+  --hover: #353535;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -16,7 +17,8 @@
   --text-color: #ffffff;
   --secondary-text-color: #dfdfdf;
   --background-color-alpha: #3f3f41ee;
-  --buttpn-color: var(--text-color)
+  --button-color: var(--text-color);
+  --hover: #cbcbcb;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -87,9 +89,9 @@ display: inline-block;
   height: 1200px;
   width: auto;
 
-  -webkit-animation: spin 8s linear infinite;
-  -moz-animation: spin 8s linear infinite;
-  animation: spin 8s linear infinite;
+  -webkit-animation: spin 10s linear infinite;
+  -moz-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
 }
 
 @-moz-keyframes spin {
