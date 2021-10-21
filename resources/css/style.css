@@ -12,7 +12,7 @@
 }
 
 .dark-mode {
-  --background-color: #303030;
+  --background-color: #0d0d0d;
   --secondary-color: #eeeff1;
   --text-color: #ffffff;
   --secondary-text-color: #dfdfdf;
@@ -49,6 +49,16 @@ html {
 @media screen and (max-width: 700px) {
   html {
     font-size: 15px;
+    overflow-x: hidden;
+  }
+  .intro-text {
+    width: 100%;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
     overflow-x: hidden;
   }
   .intro-text {
