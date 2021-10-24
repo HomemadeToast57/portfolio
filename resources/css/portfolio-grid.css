@@ -32,10 +32,10 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  
-  /* have card fade in on entry */
+}
 
-  
+.card:hover {
+  opacity: 50%;
 }
 
 .card-gradient {
@@ -130,7 +130,6 @@
   background-image: url("../../images/project_assets/portfolio.png");
   background-size: cover;
   background-position-x: center;
-  opacity: 100%;
 }
 #brick-breaker-card {
   --card-text-color: #101010;
