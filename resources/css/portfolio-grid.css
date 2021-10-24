@@ -92,7 +92,7 @@
   --card-text-color: #f0f0f0;
   --gradient-color-start: #00138000;
   --gradient-color-end: rgb(45, 45, 44);
-  background-image: url("/images/project_assets/tanks.gif");
+  background-image: url("../../images/project_assets/tanks.gif");
   background-position-x: -400px;
 }
 
@@ -100,7 +100,7 @@
   --card-text-color: #f0f0f0;
   --gradient-color-start: #00138000;
   --gradient-color-end: #4f3d33;
-  background-image: url("/images/project_assets/rc_car.jpg");
+  background-image: url("../../images/project_assets/rc_car.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -109,7 +109,7 @@
   --card-text-color: #101010;
   --gradient-color-start: #00138000;
   --gradient-color-end: #7dc9b2;
-  background-image: url("/images/project_assets/flappy.gif");
+  background-image: url("../../images/project_assets/flappy.gif");
   background-size: cover;
   background-position-y: -100px;
 
