@@ -1,5 +1,5 @@
 .cards {
-  margin: 30vh auto 30px auto;
+  margin: 30vh auto 50px auto;
   padding-top: 100px;
   max-width: 2000px;
   display: grid;
@@ -121,5 +121,4 @@
   background-image: url("../../images/project_assets/flappy.gif");
   background-size: cover;
   background-position-y: -100px;
-
 }
