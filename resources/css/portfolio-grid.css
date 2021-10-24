@@ -10,7 +10,7 @@
 }
 
 /* Three media queries to make 2 or 1 columns in the cards grid based on device width */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -95,6 +95,7 @@
   --gradient-color-end: rgb(55, 61, 66);
   background-image: url("../../images/project_assets/repofinder.png");
   background-position-x: -400px;
+  background-position-y: -50px;
 }
 
 #twisty-tanks-card {
@@ -121,4 +122,41 @@
   background-image: url("../../images/project_assets/flappy.gif");
   background-size: cover;
   background-position-y: -100px;
+}
+#portfolio-card {
+  --card-text-color: #101010;
+  --gradient-color-start: rgb(178, 173, 179, 0);
+  --gradient-color-end: rgb(178, 173, 179);
+  background-image: url("../../images/project_assets/portfolio.png");
+  background-size: cover;
+  background-position-x: center;
+  opacity: 100%;
+}
+#brick-breaker-card {
+  --card-text-color: #101010;
+  --gradient-color-start: #00138000;
+  --gradient-color-end: rgb(152, 151, 153);
+  background-image: url("../../images/project_assets/brick-breaker.gif");
+  background-size: cover;
+  background-position-x: right;
+  background-position-x: -200px;
+  
+}
+#pong-card {
+  --card-text-color: #f0f0f0;
+  --gradient-color-start: #00138000;
+  --gradient-color-end: rgb(3, 3, 3);
+  background-image: url("../../images/project_assets/pong.gif");
+  background-size: 1000px;
+  background-position-y: -100;
+  background-repeat: no-repeat;
+}
+#one-hour-platformer-card {
+  --card-text-color: #f0f0f0;
+  --gradient-color-start: rgb(35, 57, 49, 0);
+  --gradient-color-end: rgb(35, 57, 49);
+  background-image: url("../../images/project_assets/platformer.gif");
+  background-size: cover;
+  background-position-x: -300px;
+  background-position-y: -70px ;
 }
