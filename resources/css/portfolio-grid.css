@@ -63,7 +63,6 @@
   position: absolute;
   bottom: 0;
   line-height: 1.5;
-  font-size: 1.5rem;
   padding: 15px;
   z-index: 3;
   color: var(--card-text-color);
@@ -75,6 +74,16 @@
 
 .card-text > p:first-of-type {
   margin-bottom: 0;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.card-description {
+  font-size: 1.3rem;
+  font-weight: 350;
 }
 
 /* Card specific per project */

@@ -30,13 +30,13 @@ html {
   background-color: var(--background-color);
   position: relative;
   font-size: 16px;
-  height: 100%;
 }
 
 @media screen and (max-width: 700px) {
   html {
     font-size: 15px;
     overflow-x: hidden;
+    position: relative;
   }
   .intro-text {
     width: 100%;
@@ -48,6 +48,7 @@ html {
   html {
     font-size: 12px;
     overflow-x: hidden;
+    position: relative;
   }
   .intro-text {
     width: 100%;
@@ -59,11 +60,16 @@ html {
   html {
     font-size: 10px;
     overflow-x: hidden;
+    position: relative;
   }
   .intro-text {
     width: 100%;
     margin: 0px;
   }
+}
+
+body {
+  height: fit-content;
 }
 
 .content {
