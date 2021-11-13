@@ -35,7 +35,7 @@
 }
 
 .card:hover {
-  opacity: 50%;
+  opacity: 90%;
 }
 
 .card-gradient {
@@ -128,8 +128,9 @@
   --gradient-color-start: rgb(178, 173, 179, 0);
   --gradient-color-end: rgb(178, 173, 179);
   background-image: url("../../images/project_assets/portfolio.png");
-  background-size: cover;
-  background-position-x: center;
+  background-size: 1000px;
+  background-position-x: -50px;
+  background-position-y: -90px;
 }
 #brick-breaker-card {
   --card-text-color: #101010;
@@ -158,4 +159,14 @@
   background-size: cover;
   background-position-x: -300px;
   background-position-y: -70px ;
+}
+
+#calculator-card {
+  --card-text-color: #f0f0f0;
+  --gradient-color-start: rgb(35, 57, 49, 0);
+  --gradient-color-end: rgb(53, 53, 53);
+  background-image: url("../../images/project_assets/calc.png");
+  background-size: cover;
+  background-position-x: -300px;
+  background-position-y: center;
 }

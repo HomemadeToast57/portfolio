@@ -38,15 +38,13 @@ function switcher() {
   const moon = document.querySelector(".moon");
   const button = document.querySelector(".container");
 
-    sun.classList.toggle("visible");
-    moon.classList.toggle("visible");
+  sun.classList.toggle("visible");
+  moon.classList.toggle("visible");
 }
 
 button.onclick = function () {
-  
-  switcher();  
+  switcher();
   darkmode();
-  
 };
 
 initLightMode();
