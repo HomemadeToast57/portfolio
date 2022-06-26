@@ -22,12 +22,12 @@ function darkmode() {
   if (dark) {
     html.classList.remove("light-mode");
     html.classList.add("dark-mode");
-    logo.setAttribute("src", "images/logo/logo-light.png");
+    logo.setAttribute("src", "images/logo/J-LOGO-WHITE.svg");
     window.localStorage.setItem("light-mode", "dark");
   } else {
     html.classList.remove("dark-mode");
     html.classList.add("light-mode");
-    logo.setAttribute("src", "images/logo/logo-dark.png");
+    logo.setAttribute("src", "images/logo/J-LOGO-BLACK.svg");
     window.localStorage.setItem("light-mode", "light");
   }
 }
