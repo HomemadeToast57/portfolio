@@ -17,7 +17,7 @@
 }
 
 /* if device width is less than 600, make cards grid have 1 col */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 750px) {
   .cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -88,7 +88,17 @@
 
 /* Card specific per project */
 
-/* RepoFinder */
+#unchain-card {
+  --card-text-color: #101010;
+  --gradient-color-start: rgba(255, 255, 255, 0);
+  --gradient-color-end: rgba(191, 193, 196, 0.7);  
+  background-image: url("../../images/project_assets/unchain.gif");
+  background-size: 120%;
+  background-color: white;
+  background-position-y: 10px;
+  background-repeat: no-repeat;
+}
+
 #repofinder-card {
   --card-text-color: #f0f0f0;
   --gradient-color-start: #6e008c00;
