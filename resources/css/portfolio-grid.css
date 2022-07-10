@@ -1,5 +1,5 @@
 .cards {
-  margin: 30vh auto 50px auto;
+  margin: 30vh auto 30px auto;
   padding-top: 100px;
   max-width: 2000px;
   display: grid;
@@ -23,9 +23,15 @@
   }
 }
 
+@media screen and (min-width: 1500px) {
+  .cards {
+    margin-bottom: 40px;
+  }
+}
+
 .card {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  height: 600px;
+  height: 525px;
   border-radius: 1rem;
   overflow: hidden;
   object-fit: cover;
@@ -39,7 +45,6 @@
 }
 
 .card-gradient {
-
   position: absolute;
   top: 0;
   left: 0;
@@ -47,8 +52,6 @@
   height: 100%;
   background: linear-gradient(to bottom, var(--gradient-color-start) 0%, var(--gradient-color-end) 95%);
   z-index: 2;
-
-
 }
 
 .card-image {
@@ -91,7 +94,7 @@
 #unchain-card {
   --card-text-color: #101010;
   --gradient-color-start: rgba(255, 255, 255, 0);
-  --gradient-color-end: rgba(191, 193, 196, 0.7);  
+  --gradient-color-end: rgba(191, 193, 196, 100);  
   background-image: url("../../images/project_assets/unchain.gif");
   background-size: 120%;
   background-color: white;
@@ -179,4 +182,10 @@
   background-size: cover;
   background-position-x: -300px;
   background-position-y: center;
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    height: 425px;
+  }
 }

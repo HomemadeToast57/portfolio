@@ -149,3 +149,180 @@ body {
     margin: 0px;
   }
 }
+
+.developedBy {
+  margin-bottom: 10px;
+}
+
+.credits {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  margin: 0px 0 30px 0;
+}
+
+.creditsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.creditLink {
+  flex: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.creditLink:visited {
+  color: white;
+}
+
+.creditLink > i {
+  transform: scale(1.4);
+}
+
+.creditLink:hover {
+  opacity: 0.6;
+}
+
+.contributeTitle {
+  margin-top: 10px;
+}
+
+.website {
+  color: var(--text-color);
+  background: #2b2b2b;
+}
+
+.website > i {
+  color: var(--opposing-text);
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.github {
+  background-color: #6a19ff;
+  color: white;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.myInfo {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-left: 20px;
+}
+
+.myImg {
+  width: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.linksList {
+  display: flex !important;
+  align-items: center;
+}
+
+.horizontalSeparatorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.horizontalSeparator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  opacity: 0.5;
+  height: 3px;
+  background-color: var(--text-color);
+  display: none;
+  margin: 20px 0 20px 0;
+}
+
+.copyright {
+  margin: 0px 0 15px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 668px) {
+  .credits {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .myInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name {
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  .links {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .creditLink {
+    flex: 1;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  .creditLink > i {
+    transform: scale(1.7);
+  }
+}
