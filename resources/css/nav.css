@@ -23,6 +23,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem 1.5rem 1.5rem;
+  background: linear-gradient(#ffffff8a, rgba(255, 255, 255, 0));
 }
 
 .hamburger {
