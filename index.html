@@ -1,413 +1,133 @@
 <!DOCTYPE html>
-<html id="html" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" type="text/css" href="resources/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
-    <link
-    rel="stylesheet"
-    type="text/css"
-    href="resources/css/dark-mode-switch.css"
-    />
-    <link rel="stylesheet" type="text/css" href="resources/css/variables.css" />
-    <link
-    rel="stylesheet"
-    type="text/css"
-    href="resources/css/portfolio-grid.css"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Singer - Software Engineer II</title>
+    <meta name="description" content="Software Engineer II at CodeHS. Building AI-powered education tools.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="resources/css/style.css">
     <script src="https://kit.fontawesome.com/4ef6e9feb0.js" crossorigin="anonymous"></script>
-
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="images/favicons.ico/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="images/favicons.ico/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="images/favicons.ico/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="images/favicons.ico/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="images/favicons.ico/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="images/favicons.ico/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="images/favicons.ico/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="images/favicons.ico/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicons.ico/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="images/favicons.ico/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicons.ico/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="images/favicons.ico/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicons.ico/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/favicons.ico/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="images/favicons.ico/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
-
-    <title>Jack Singer</title>
-  </head>
-
-  <body>
-    <header class="header">
-      <nav class="navbar">
-        <ul class="logo-list">
-          <li class="logo-item">
-            <a href="#"
-              ><img
-                class="logo"
-                id="logo"
-                src="images/logo/J-LOGO-WHITE.svg"
-                alt=""
-              />
-            </a>
-          </li>
-          <li class="logo-item">
-            <a href="#" class="nav-logo">Jack Singer</a>
-          </li>
-        </ul>
-        <ul class="nav-menu">
-          <!-- <li class="nav-item">
-            <a href="/about.html" class="nav-link">About</a>
-          </li> -->
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link view-work-link">View Work</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
-
-    <div class="dark-mode-div">
-      <button
-        id="dark-mode-button"
-        class="container"
-        aria-label="Toggle color mode"
-        title="Toggle color mode"
-      >
-        <div class="sun visible"></div>
-        <div class="moon">
-          <div class="star"></div>
-          <div class="star small"></div>
-        </div>
-      </button>
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons.ico/favicon-32x32.png">
+</head>
+<body>
+    <div class="blob-container">
+        <img src="images/color.png" alt="" class="blob" aria-hidden="true">
     </div>
-
-    <div class="content">
-      <div class="color-blob-container">
-        <img class="color-blob" src=images/color.png alt="" />
-      </div>
-
-      <div class="intro-text">
-        <h1 class="animate__fadeInUp" id="statement">
-          A software engineer building impactful applications one line at a time
-        </h1>
-        <h3 id="sub-statement">
-          Computer Science Student at SUNY Binghamton. Experience in App Dev,
-          Game Dev, Web Dev, and Robotics.
-        </h3>
-        <a href="#projects" class="nav-link view-work-link big-work-button"
-          >View Work</a
-        >
-      </div>
-
-      <div
-        class="cards"
-        id="projects"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-        data-aos-delay="200"
-      >
-        <!-- SpotiMedia Research -->
-        <!-- <a href="https://github.com/HomemadeToast57/spotimedia-data-science" target="_blank">
-          <div class="card" id="spotimedia-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">SpotiMedia Research</h3>
-              <h4 class="card-description">
-                Research Analysis of Musical Features' Influence on User Sentiment Across Social Media Platforms
-              </h4>
-            </div>
-          </div>
-        </a> -->
-
-        <!-- Unchain -->
-        <a href="https://github.com/HomemadeToast57/unchain" target="_blank">
-          <div class="card" id="unchain-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">Unchain.</h3>
-              <h4 class="card-description">
-                Lightweight app made with React.js that tracks progress towards
-                lasting sobriety from addictions.
-              </h4>
-            </div>
-          </div>
+    
+    <nav class="nav">
+        <a href="#" class="nav-logo">
+            <img src="images/logo/J-LOGO-WHITE.svg" alt="Jack Singer" class="logo-img" id="logo-img">
         </a>
-
-        <!-- RepoFinder -->
-        <a href="https://github.com/HomemadeToast57/repofinder" target="_blank">
-          <div class="card" id="repofinder-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">RepoFinder</h3>
-              <h4 class="card-description">
-                APT repository app for jailbroken iOS devices.
-              </h4>
-            </div>
-          </div>
-        </a>
-
-        <!-- Calculator -->
-        <a
-          href="https://github.com/HomemadeToast57/swiftui-calculator"
-          target="_blank"
-        >
-          <div class="card" id="calculator-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">iOS Calculator</h3>
-              <h4 class="card-description">
-                Calculator app made with SwiftUI for iPhone.
-              </h4>
-            </div>
-          </div>
-        </a>
-
-        <!-- Portfolio Website -->
-        <a href="https://github.com/HomemadeToast57/portfolio" target="_blank">
-          <div class="card" id="portfolio-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">Portfolio Website</h3>
-              <h4 class="card-description">The website you're looking at!</h4>
-            </div>
-          </div>
-        </a>
-
-        <!-- Twisty Tanks -->
-        <a
-          href="https://github.com/HomemadeToast57/twisty-tanks"
-          target="_blank"
-        >
-          <div class="card" id="twisty-tanks-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">Twisty Tanks</h3>
-              <h4 class="card-description">
-                Multiplayer tank game made with Unity and C#.
-              </h4>
-            </div>
-          </div>
-        </a>
-
-        <!-- RC Car -->
-        <a href="https://github.com/HomemadeToast57/rc-car" target="_blank">
-          <div class="card" id="rc-car-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">LEGO RC Car</h3>
-              <h4 class="card-description">
-                A classic toy for kids now modernized and controllable from any
-                bluetooth device.
-              </h4>
-            </div>
-          </div>
-        </a>
-
-        <!-- Flappy Bird -->
-        <a
-          href="https://github.com/HomemadeToast57/flappy-bird"
-          target="_blank"
-        >
-          <div class="card" id="flappy-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">Flappy Bird</h3>
-              <h4 class="card-description">
-                A remake of Flappy Bird written in Unity with C#.
-              </h4>
-            </div>
-          </div>
-        </a>
-
-        <!-- Brick Breaker -->
-        <a
-          href="https://github.com/HomemadeToast57/brick-breaker"
-          target="_blank"
-        >
-          <div class="card" id="brick-breaker-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">Brick Breaker</h3>
-              <h4 class="card-description">
-                A circular brick breaker game written in Unity with C#.
-              </h4>
-            </div>
-          </div>
-        </a>
-
-        <!-- Pong -->
-        <a href="https://github.com/HomemadeToast57/pong" target="_blank">
-          <div class="card" id="pong-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">Pong</h3>
-              <h4 class="card-description">
-                The classic pong game now made in Unity with C#.
-              </h4>
-            </div>
-          </div>
-        </a>
-
-        <!--  -->
-        <a
-          href="https://github.com/HomemadeToast57/one-hour-platformer"
-          target="_blank"
-        >
-          <div class="card" id="one-hour-platformer-card">
-            <div class="card-gradient"></div>
-            <div class="card-text">
-              <h3 class="card-title">One Hour Platformer</h3>
-              <h4 class="card-description">
-                Platformer game made in Unity with C# in one hour.
-              </h4>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Make form with name, email, subject, and message. Then add "send message" button. -->
-      <!-- <div class="contact-section" id="contact-section">
-        <a href="mailto:jack@jacksinger.dev">
-          <button class="contact-button view-work-link" id="contact-button">
-            Contact Jack
-          </button>
-        </a>
-      </div> -->
-    </div>
-  </body>
-
-  <div class="horizontalSeparatorContainer">
-    <div class="horizontalSeparator"></div>
-  </div>
-
-  <footer class="footer">
-    <div class="creditsContainer" id="contact">
-      <div class="credits">
-        <div class="creditsName">
-          <div class="myInfo">
-            <img
-              class="myImg"
-              src="https://avatars.githubusercontent.com/u/54961512?v=4"
-              alt=""
-            />
-            <h1 class="name">Jack Singer</h1>
-          </div>
+        <div class="nav-links">
+            <a href="resume.pdf" target="_blank">Resume</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
-        <div class="links">
-          <div class="linksList">
-            <!-- <a
-              class="creditLink website"
-              href="https://jacksinger.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fas fa-globe"></i>
-            </a> -->
-            <a
-              class="creditLink github"
-              href="https://github.com/HomemadeToast57"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              class="creditLink twitter"
-              href="https://twitter.com/HomemadeToast57/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              class="creditLink linkedin"
-              href="https://www.linkedin.com/in/jacobasinger/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </nav>
 
-  <footer class="copyright">
-      &copy; Copyright <script>document.write(new Date().getFullYear())</script>. Jacob (Jack) Singer - All rights reserved.
-  </footer>
+    <main>
+        <section class="hero">
+            <h1>Jack Singer</h1>
+            <p class="hero-role">Software Engineer II at CodeHS</p>
+            <p class="hero-bio">
+                I build AI-powered education tools that reach millions of students. 
+                Currently focused on LLM applications and developer experience.
+            </p>
+            <div class="hero-links">
+                <a href="mailto:jacobsinger22@gmail.com" class="link">jacobsinger22@gmail.com</a>
+                <span class="divider">•</span>
+                <a href="https://github.com/HomemadeToast57" target="_blank" class="link">GitHub</a>
+                <span class="divider">•</span>
+                <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="link">LinkedIn</a>
+            </div>
+        </section>
 
-  <script src="resources/scripts/nav.js"></script>
-  <script src="resources/scripts/darkmode.js"></script>
+        <section class="section">
+            <h2>Current Work</h2>
+            <div class="work-item">
+                <div class="work-header">
+                    <span class="work-title">Software Engineer II</span>
+                    <span class="work-place">CodeHS</span>
+                    <span class="work-date">Aug 2024 – Present</span>
+                </div>
+                <p class="work-desc">
+                    Full-stack development serving 6M+ students. Leading AI product development and 
+                    developer experience initiatives that increased team PR throughput by 88%.
+                </p>
+                <ul class="work-highlights">
+                    <li><strong>AI Creator</strong> – LLM-powered curriculum tool used by thousands of teachers</li>
+                    <li><strong>AI Tutor</strong> – Context-aware IDE assistant with multi-layer validation</li>
+                    <li><strong>Developer Experience</strong> – Integrated Claude Code/Cursor, MCP support, internal CLI tools</li>
+                    <li><strong>bool.com</strong> – Rebuilt AI website builder frontend, scaled to 8,000+ sites</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Background</h2>
+            <div class="background-item">
+                <span class="bg-title">Software Engineer Intern</span>
+                <span class="bg-place">CodeHS</span>
+                <span class="bg-date">Summer 2023</span>
+            </div>
+            <div class="background-item">
+                <span class="bg-title">B.S. Computer Science, cum laude</span>
+                <span class="bg-place">Binghamton University</span>
+                <span class="bg-date">2020 – 2024</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">Django</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">React</span>
+                <span class="skill">PostgreSQL</span>
+                <span class="skill">LLMs</span>
+                <span class="skill">Claude Code</span>
+                <span class="skill">Cursor</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Jack Singer</p>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+        
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+        
+        function updateIcon(theme) {
+            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+        
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
