@@ -32,9 +32,9 @@ html {
 }
 
 body {
-    max-width: 680px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 4rem 1.5rem;
+    padding: 5rem 2rem;
 }
 
 /* Navigation */
@@ -146,7 +146,7 @@ body {
 
 /* Sections */
 .section {
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
 }
 
 .section h2 {
@@ -267,7 +267,7 @@ footer p {
     font-size: 0.875rem;
 }
 
-/* Blob Animation */
+/* Subtle gradient background */
 .blob-container {
     position: fixed;
     top: 0;
@@ -277,17 +277,17 @@ footer p {
     overflow: hidden;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.08;
 }
 
 .blob {
     position: absolute;
-    left: -20%;
-    top: -40%;
-    height: 140vh;
+    left: -10%;
+    top: -30%;
+    height: 120vh;
     width: auto;
-    animation: spin 10s linear infinite;
-    filter: blur(40px);
+    animation: spin 20s linear infinite;
+    filter: blur(60px);
 }
 
 @keyframes spin {
@@ -297,34 +297,51 @@ footer p {
 }
 
 [data-theme="dark"] .blob-container {
-    opacity: 0.15;
+    opacity: 0.04;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
     body {
-        padding: 2rem 1rem;
+        padding: 3rem 1.25rem;
     }
-    
+
+    .nav {
+        margin-bottom: 3rem;
+    }
+
+    .hero {
+        margin-bottom: 3rem;
+    }
+
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.875rem;
     }
-    
-    .hero-role {
-        font-size: 1.1rem;
+
+    .hero-bio {
+        font-size: 1rem;
     }
-    
+
+    .section {
+        margin-bottom: 3rem;
+    }
+
     .work-header,
     .background-item {
         flex-direction: column;
         gap: 0.25rem;
     }
-    
+
     .work-date,
     .bg-date {
         margin-left: 0;
     }
-    
+
+    .work-highlights li {
+        padding: 0.4rem 0;
+        padding-left: 1.1rem;
+    }
+
     .blob {
         height: 100vh;
         left: -50%;
