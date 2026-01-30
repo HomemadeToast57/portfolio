@@ -34,18 +34,23 @@
 
     <main>
         <section class="hero">
-            <h1>Jack Singer</h1>
-            <p class="hero-role">Software Engineer</p>
-            <p class="hero-bio">
-                I build thoughtful software at scale.<br>
-                Guided by design, craft, and real-world impact.
-            </p>
-            <div class="hero-links">
-                <a href="mailto:jacobsinger22@gmail.com" class="link">jacobsinger22@gmail.com</a>
-                <span class="divider">•</span>
-                <a href="https://github.com/HomemadeToast57" target="_blank" class="link">GitHub</a>
-                <span class="divider">•</span>
-                <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="link">LinkedIn</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Jack Singer</h1>
+                    <p class="hero-role">Software Engineer</p>
+                    <p class="hero-bio">
+                        I build thoughtful software at scale.<br>
+                        Guided by design, craft, and real-world impact.
+                    </p>
+                    <div class="hero-links">
+                        <a href="mailto:jacobsinger22@gmail.com" class="link">jacobsinger22@gmail.com</a>
+                        <span class="divider">•</span>
+                        <a href="https://github.com/HomemadeToast57" target="_blank" class="link">GitHub</a>
+                        <span class="divider">•</span>
+                        <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="link">LinkedIn</a>
+                    </div>
+                </div>
+                <img src="https://avatars.githubusercontent.com/u/54961512?v=4" alt="Jack Singer" class="hero-photo">
             </div>
         </section>
 
@@ -121,8 +126,9 @@
         const html = document.documentElement;
         const icon = themeToggle.querySelector('i');
 
-        // Check for saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        // Check for saved theme or device preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
         html.setAttribute('data-theme', savedTheme);
         updateIcon(savedTheme);
 
