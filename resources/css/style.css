@@ -159,6 +159,14 @@ body {
 }
 
 /* Work */
+.work-item {
+    margin-bottom: 2rem;
+}
+
+.work-item:last-child {
+    margin-bottom: 0;
+}
+
 .work-header {
     display: flex;
     flex-wrap: wrap;

@@ -35,10 +35,10 @@
     <main>
         <section class="hero">
             <h1>Jack Singer</h1>
-            <p class="hero-role">Software Engineer II at CodeHS</p>
+            <p class="hero-role">Software Engineer</p>
             <p class="hero-bio">
-                I build AI-powered education tools that reach millions of students. 
-                Currently focused on LLM applications and developer experience.
+                I build thoughtful software at scale.<br>
+                Guided by design, craft, and real-world impact.
             </p>
             <div class="hero-links">
                 <a href="mailto:jacobsinger22@gmail.com" class="link">jacobsinger22@gmail.com</a>
@@ -57,10 +57,11 @@
                     <span class="work-place">CodeHS</span>
                     <span class="work-date">Feb 2026 – Present</span>
                 </div>
-                <p class="work-desc">
-                    Promoted to lead AI product development and developer experience initiatives 
-                    serving 6M+ students.
-                </p>
+                <ul class="work-highlights">
+                    <li>Lead UI/UX redesigns improving engagement for 6M+ students</li>
+                    <li>Architect AI features serving millions of daily active users</li>
+                    <li>Drove 88% increase in team PR throughput through DX tooling</li>
+                </ul>
             </div>
             <div class="work-item">
                 <div class="work-header">
@@ -68,15 +69,11 @@
                     <span class="work-place">CodeHS</span>
                     <span class="work-date">Aug 2024 – Feb 2026</span>
                 </div>
-                <p class="work-desc">
-                    Full-stack development on AI-powered education tools that increased team 
-                    PR throughput by 88%.
-                </p>
                 <ul class="work-highlights">
-                    <li><strong>AI Creator</strong> – LLM-powered curriculum tool used by thousands of teachers</li>
-                    <li><strong>AI Tutor</strong> – Context-aware IDE assistant with multi-layer validation</li>
-                    <li><strong>Developer Experience</strong> – Integrated Claude Code/Cursor, MCP support, internal CLI tools</li>
-                    <li><strong>bool.com</strong> – Rebuilt AI website builder frontend, scaled to 8,000+ sites</li>
+                    <li>Built <strong>AI Creator</strong>: LLM-powered tool enabling thousands of teachers to generate curriculum</li>
+                    <li>Developed <strong>AI Tutor</strong>: Context-aware IDE assistant with multi-layer validation</li>
+                    <li>Launched <strong>bool.com</strong>: AI website builder, rebuilt frontend, scaled to 8,000+ sites</li>
+                    <li>Integrated <strong>Claude Code/Cursor</strong> with MCP support, cutting developer onboarding time</li>
                 </ul>
             </div>
         </section>
@@ -102,8 +99,10 @@
                 <span class="skill">Django</span>
                 <span class="skill">TypeScript</span>
                 <span class="skill">React</span>
+                <span class="skill">UI/UX</span>
                 <span class="skill">PostgreSQL</span>
                 <span class="skill">LLMs</span>
+                <span class="skill">MCP</span>
                 <span class="skill">Claude Code</span>
                 <span class="skill">Cursor</span>
             </div>
@@ -119,12 +118,12 @@
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
         const icon = themeToggle.querySelector('i');
-        
+
         // Check for saved theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', savedTheme);
         updateIcon(savedTheme);
-        
+
         themeToggle.addEventListener('click', () => {
             const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -132,11 +131,11 @@
             localStorage.setItem('theme', newTheme);
             updateIcon(newTheme);
         });
-        
+
         function updateIcon(theme) {
             icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
         }
-        
+
         // Year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
