@@ -334,7 +334,7 @@ footer {
     overflow: hidden;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.08;
+    opacity: 0.35;
 }
 
 .blob {
