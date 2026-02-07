@@ -83,11 +83,6 @@
         .og-logo {
             height: 40px;
             width: auto;
-            filter: invert(0);
-        }
-
-        [data-theme="light"] .og-logo {
-            filter: invert(1);
         }
 
         .og-url {
@@ -289,7 +284,7 @@
             <img src="../images/color.png" alt="" class="og-blob">
 
             <div class="og-top">
-                <img src="../images/logo/J-LOGO-WHITE.svg" alt="Jack Singer" class="og-logo">
+                <img src="../images/logo/logo-light.png" alt="Jack Singer" class="og-logo" id="og-logo">
                 <span class="og-url">jacksinger.dev</span>
             </div>
 
@@ -330,11 +325,20 @@
         const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
         html.setAttribute('data-theme', savedTheme);
 
+        const ogLogo = document.getElementById('og-logo');
+
+        function updateLogo(theme) {
+            ogLogo.src = theme === 'dark'
+                ? '../images/logo/logo-light.png'
+                : '../images/logo/logo-dark.png';
+        }
+
         themeToggle.addEventListener('click', () => {
             const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+            updateLogo(newTheme);
         });
 
         const skillsToggle = document.getElementById('skills-toggle');
