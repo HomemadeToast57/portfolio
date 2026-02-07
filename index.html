@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Singer - Software Engineer</title>
+    <title>Jack Singer</title>
     <meta name="description" content="Software Engineer building AI-powered products that impact millions.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="resources/css/style.css">
     <script src="https://kit.fontawesome.com/4ef6e9feb0.js" crossorigin="anonymous"></script>
@@ -21,12 +21,15 @@
     <div class="blob-container">
         <img src="images/color.png" alt="" class="blob" aria-hidden="true">
     </div>
-    
+
     <nav class="nav">
         <a href="#" class="nav-logo">
             <img src="images/logo/J-LOGO-WHITE.svg" alt="Jack Singer" class="logo-img" id="logo-img">
         </a>
         <div class="nav-links">
+            <a href="mailto:jacobsinger22@gmail.com" class="nav-link">Email</a>
+            <a href="https://github.com/HomemadeToast57" target="_blank" class="nav-link">GitHub</a>
+            <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="nav-link">LinkedIn</a>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -34,60 +37,65 @@
     </nav>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Jack Singer</h1>
-                    <p class="hero-role">Software Engineer</p>
-                    <p class="hero-bio">
-                        I build thoughtful software at scale.<br>
-                        Guided by design, craft, and real-world impact.
-                    </p>
-                    <div class="hero-links">
-                        <a href="mailto:jacobsinger22@gmail.com" class="link">jacobsinger22@gmail.com</a>
-                        <span class="divider">•</span>
-                        <a href="https://github.com/HomemadeToast57" target="_blank" class="link">GitHub</a>
-                        <span class="divider">•</span>
-                        <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="link">LinkedIn</a>
+        <section class="hero" id="hero">
+            <div class="hero-label">Software Engineer</div>
+            <h1 class="hero-name">
+                <span class="line">Jack</span>
+                <span class="line">Singer</span>
+            </h1>
+            <p class="hero-bio">
+                Building thoughtful software at scale —<br>
+                guided by design, craft, and real-world impact.
+            </p>
+            <div class="hero-links">
+                <a href="mailto:jacobsinger22@gmail.com" class="hero-link">Email</a>
+                <a href="https://github.com/HomemadeToast57" target="_blank" class="hero-link">GitHub</a>
+                <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="hero-link">LinkedIn</a>
+            </div>
+        </section>
+
+        <div class="marquee-wrap">
+            <div class="marquee">
+                <span>Python &mdash; Django &mdash; JavaScript &mdash; TypeScript &mdash; React &mdash; Next.js &mdash; Node.js &mdash; PostgreSQL &mdash; Docker &mdash; AWS &mdash; Figma &mdash; Unix &mdash; REST API &mdash; Git &mdash; Tailwind &mdash;&nbsp;</span>
+                <span>Python &mdash; Django &mdash; JavaScript &mdash; TypeScript &mdash; React &mdash; Next.js &mdash; Node.js &mdash; PostgreSQL &mdash; Docker &mdash; AWS &mdash; Figma &mdash; Unix &mdash; REST API &mdash; Git &mdash; Tailwind &mdash;&nbsp;</span>
+            </div>
+        </div>
+
+        <section class="section experience" id="experience">
+            <div class="section-label">Experience</div>
+            <div class="exp-grid">
+                <article class="exp-card">
+                    <div class="exp-meta">
+                        <span class="exp-place">CodeHS</span>
+                        <span class="exp-date">Feb 2026 &ndash; Present</span>
                     </div>
-                </div>
-                <!-- <img src="https://avatars.githubusercontent.com/u/54961512?v=4" alt="Jack Singer" class="hero-photo"> -->
+                    <h3 class="exp-title">Software Engineer II</h3>
+                    <ul class="exp-list">
+                        <li>Lead UI/UX redesigns for 6M+ student platform</li>
+                        <li>Architect AI features serving millions of daily active users</li>
+                        <li>Integrate agentic coding agents into curriculum team workflows</li>
+                        <li>Drive DX initiatives that increased PR throughput 88%</li>
+                    </ul>
+                </article>
+                <article class="exp-card">
+                    <div class="exp-meta">
+                        <span class="exp-place">CodeHS</span>
+                        <span class="exp-date">Aug 2024 &ndash; Feb 2026</span>
+                    </div>
+                    <h3 class="exp-title">Software Engineer</h3>
+                    <ul class="exp-list">
+                        <li>Built AI Creator: LLM-powered curriculum tool for thousands of teachers</li>
+                        <li>Developed AI Chat: Context-aware tutoring assistant</li>
+                        <li>Launched bool.com: AI website builder scaled to 8,000+ sites</li>
+                        <li>Created internal CLI used by entire team to interface with AI agents</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Experience</h2>
-            <div class="work-item">
-                <div class="work-header">
-                    <span class="work-title">Software Engineer II</span>
-                    <span class="work-place">CodeHS</span>
-                    <span class="work-date">Feb 2026 – Present</span>
-                </div>
-                <ul class="work-highlights">
-                    <li>Lead UI/UX redesigns for 6M+ student platform</li>
-                    <li>Architect AI features serving millions of daily active users</li>
-                    <li>Integrate agentic coding agents (Claude Code, Cursor) into curriculum team workflows</li>
-                    <li>Drive DX initiatives that increased PR throughput 88%</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <div class="work-header">
-                    <span class="work-title">Software Engineer</span>
-                    <span class="work-place">CodeHS</span>
-                    <span class="work-date">Aug 2024 – Feb 2026</span>
-                </div>
-                <ul class="work-highlights">
-                    <li>Built AI Creator: LLM-powered curriculum tool for thousands of teachers</li>
-                    <li>Developed AI Chat: Context-aware tutoring assistant with multi-layer validation</li>
-                    <li>Launched bool.com: AI website builder scaled to 8,000+ sites</li>
-                    <li>Created internal CLI used by entire team to interface with AI agents, streamlining workflows</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills">
+        <section class="section skills-section" id="skills">
+            <div class="section-label">Skills</div>
+            <div class="skills-flow">
                 <span class="skill">Python</span>
                 <span class="skill">Django</span>
                 <span class="skill">JavaScript</span>
@@ -107,76 +115,135 @@
         </section>
     </main>
 
+    <nav class="side-nav" id="side-nav">
+        <a href="#hero" class="side-nav-dot active" data-section="hero"></a>
+        <a href="#experience" class="side-nav-dot" data-section="experience"></a>
+        <a href="#skills" class="side-nav-dot hidden" data-section="skills"></a>
+    </nav>
+
     <footer>
-        <div class="footer-row">
+        <div class="footer-left">
             <span class="footer-name">Jack Singer</span>
-            <span class="footer-divider">·</span>
-            <a href="mailto:jacobsinger22@gmail.com" class="footer-link">Email</a>
-            <span class="footer-divider">·</span>
-            <a href="https://github.com/HomemadeToast57" target="_blank" class="footer-link">GitHub</a>
-            <span class="footer-divider">·</span>
-            <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="footer-link">LinkedIn</a>
+            <span class="footer-loc">Chicago, IL</span>
         </div>
-        <div class="footer-location">Chicago, IL · 2026</div>
+        <div class="footer-right">
+            <a href="mailto:jacobsinger22@gmail.com">Email</a>
+            <a href="https://github.com/HomemadeToast57" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/jacobasinger" target="_blank">LinkedIn</a>
+        </div>
     </footer>
 
+
+
     <script>
-        // Register ScrollTrigger
         gsap.registerPlugin(ScrollTrigger);
 
-        // Hero animations
-        gsap.from('.hero-text h1', {
-            opacity: 0,
-            y: 30,
-            duration: 1,
-            ease: 'power3.out'
-        });
+        const heroName = document.querySelector('.hero-name');
+        heroName.style.fontFamily = "'Geist', sans-serif";
 
-        gsap.from('.hero-text .hero-role', {
-            opacity: 0,
-            y: 20,
-            duration: 0.8,
-            delay: 0.2,
-            ease: 'power3.out'
-        });
+        gsap.from('.hero-label', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' });
+        gsap.from('.hero-name .line', { opacity: 0, y: 60, duration: 1, stagger: 0.15, ease: 'power3.out', delay: 0.1 });
+        gsap.from('.hero-bio', { opacity: 0, y: 20, duration: 0.8, delay: 0.5, ease: 'power3.out' });
+        gsap.from('.marquee-wrap', { opacity: 0, duration: 1, delay: 0.7, ease: 'power2.out' });
 
-        gsap.from('.hero-text .hero-bio', {
-            opacity: 0,
-            y: 20,
-            duration: 0.8,
-            delay: 0.4,
-            ease: 'power3.out'
-        });
+        const pixelFonts = [
+            "'Geist Pixel Square'",
+            "'Geist Pixel Grid'",
+            "'Geist Pixel Circle'",
+            "'Geist Pixel Triangle'",
+            "'Geist Pixel Line'"
+        ];
 
-        gsap.from('.hero-photo', {
-            opacity: 0,
-            x: 30,
-            duration: 1,
-            delay: 0.3,
-            ease: 'power3.out'
-        });
+        function fontPulse() {
+            const pick = pixelFonts[Math.floor(Math.random() * pixelFonts.length)];
+            gsap.to(heroName, {
+                opacity: 0,
+                duration: 0.25,
+                ease: 'power2.in',
+                onComplete: () => {
+                    heroName.style.fontFamily = pick + ', monospace';
+                    gsap.to(heroName, {
+                        opacity: 1,
+                        duration: 0.3,
+                        ease: 'power2.out',
+                        onComplete: () => {
+                            gsap.delayedCall(1.5, () => {
+                                gsap.to(heroName, {
+                                    opacity: 0,
+                                    duration: 0.25,
+                                    ease: 'power2.in',
+                                    onComplete: () => {
+                                        heroName.style.fontFamily = "'Geist', sans-serif";
+                                        gsap.to(heroName, {
+                                            opacity: 1,
+                                            duration: 0.3,
+                                            ease: 'power2.out',
+                                            onComplete: () => {
+                                                gsap.delayedCall(3 + Math.random() * 3, fontPulse);
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+        }
+        gsap.delayedCall(2.5, fontPulse);
 
-        // Scroll animations
         gsap.utils.toArray('.section').forEach(section => {
             gsap.from(section, {
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    toggleActions: 'play none none reverse'
-                },
-                opacity: 0,
-                y: 40,
-                duration: 0.8,
-                ease: 'power3.out'
+                scrollTrigger: { trigger: section, start: 'top 85%', toggleActions: 'play none none reverse' },
+                opacity: 0, y: 50, duration: 0.8, ease: 'power3.out'
             });
         });
 
-        // Theme toggle
+        gsap.utils.toArray('.exp-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none reverse' },
+                opacity: 0, y: 40, duration: 0.7, delay: i * 0.1, ease: 'power3.out'
+            });
+        });
+
+        const sideNav = document.getElementById('side-nav');
+        const sideNavLinks = document.querySelectorAll('.side-nav-dot');
+
+        gsap.from(sideNav, { opacity: 0, x: 30, duration: 0.6, delay: 1.2, ease: 'power3.out' });
+
+        ['hero', 'experience', 'skills'].forEach(id => {
+            ScrollTrigger.create({
+                trigger: '#' + id,
+                start: 'top 50%',
+                end: 'bottom 50%',
+                onEnter: () => setActiveNav(id),
+                onEnterBack: () => setActiveNav(id)
+            });
+        });
+
+        const skillsDot = document.querySelector('.side-nav-dot[data-section="skills"]');
+        ScrollTrigger.create({
+            trigger: '#skills',
+            start: 'top 90%',
+            onEnter: () => {
+                skillsDot.classList.remove('hidden');
+            },
+            onLeaveBack: () => {
+                if (!skillsDot.classList.contains('active')) {
+                    skillsDot.classList.add('hidden');
+                }
+            }
+        });
+
+        function setActiveNav(id) {
+            sideNavLinks.forEach(link => {
+                link.classList.toggle('active', link.dataset.section === id);
+            });
+        }
+
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
         const icon = themeToggle.querySelector('i');
-
-        // Check for saved theme or device preference
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
         html.setAttribute('data-theme', savedTheme);
@@ -193,8 +260,6 @@
         function updateIcon(theme) {
             icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
         }
-
-
     </script>
 </body>
 </html>
