@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Preview - Jack Singer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            background: var(--bg);
+        }
+
+        .preview-container {
+            margin-bottom: 3rem;
+        }
+
+        .preview-label {
+            font-family: 'Geist', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* ——— OG CARD ——— */
+        .og-preview {
+            width: 1200px;
+            height: 630px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        [data-theme="dark"] .og-preview {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        /* blob background */
+        .og-blob {
+            position: absolute;
+            top: -40%;
+            left: -20%;
+            height: 160%;
+            width: auto;
+            opacity: 0.06;
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        [data-theme="dark"] .og-blob {
+            opacity: 0.03;
+        }
+
+        /* top bar — logo + url */
+        .og-top {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 3rem;
+        }
+
+        .og-logo {
+            height: 40px;
+            width: auto;
+            filter: invert(0);
+        }
+
+        [data-theme="light"] .og-logo {
+            filter: invert(1);
+        }
+
+        .og-url {
+            font-family: 'Geist', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* main content area */
+        .og-main {
+            position: relative;
+            z-index: 1;
+            padding: 0 3rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .og-label {
+            font-family: 'Geist', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        .og-name {
+            font-family: 'Geist Pixel Square', monospace;
+            font-size: 8.5rem;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .og-bio {
+            font-family: 'Geist', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.55;
+            color: var(--text);
+            font-weight: 400;
+            max-width: 650px;
+            opacity: 0.6;
+        }
+
+        /* bottom bar — skills marquee + location */
+        .og-bottom {
+            position: relative;
+            z-index: 1;
+        }
+
+        .og-skills-bar {
+            border-top: 1px solid var(--border);
+            padding: 1.25rem 3rem;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .og-skills-text {
+            font-family: 'Geist Pixel Square', monospace;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            letter-spacing: 0;
+            word-spacing: 0.3em;
+        }
+
+
+        /* ——— CONTROLS ——— */
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .screenshot-btn {
+            font-family: 'Geist', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            color: var(--bg);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .screenshot-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        [data-theme="dark"] .screenshot-btn {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: 'Geist', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            color: var(--text);
+            border-color: var(--text-secondary);
+        }
+
+        .font-select {
+            font-family: 'Geist', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.75rem 1rem;
+            background: var(--bg);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            -webkit-appearance: none;
+            appearance: none;
+            padding-right: 2rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23777' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+        }
+
+        .font-select:hover {
+            color: var(--text);
+            border-color: var(--text-secondary);
+        }
+
+        .font-select option {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .slider-label {
+            font-family: 'Geist', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .size-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 120px;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .size-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--text);
+            cursor: pointer;
+        }
+
+        @media (max-width: 1400px) {
+            .og-preview {
+                transform: scale(0.75);
+                transform-origin: center;
+            }
+            .preview-container {
+                margin-bottom: -4rem;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .og-preview {
+                transform: scale(0.55);
+            }
+            .preview-container {
+                margin-bottom: -8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-label">Open Graph Preview (1200 × 630px)</div>
+        <div class="og-preview" id="og-preview">
+            <img src="../images/color.png" alt="" class="og-blob">
+
+            <div class="og-top">
+                <img src="../images/logo/J-LOGO-WHITE.svg" alt="Jack Singer" class="og-logo">
+                <span class="og-url">jacksinger.dev</span>
+            </div>
+
+            <div class="og-main">
+                <div class="og-label">Software Engineer</div>
+                <h1 class="og-name">Jack Singer</h1>
+                <p class="og-bio">Building thoughtful software at scale — guided by design, craft, and real-world impact.</p>
+            </div>
+
+            <div class="og-bottom">
+                <div class="og-skills-bar">
+                    <span class="og-skills-text">Python — Django — JavaScript — TypeScript — React — Next.js — Node.js — PostgreSQL — Docker — AWS — Figma</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <select id="font-select" class="font-select">
+            <option value="'Geist Pixel Square', monospace">Pixel Square</option>
+            <option value="'Geist Pixel Grid', monospace">Pixel Grid</option>
+            <option value="'Geist Pixel Circle', monospace">Pixel Circle</option>
+            <option value="'Geist Pixel Triangle', monospace">Pixel Triangle</option>
+            <option value="'Geist Pixel Line', monospace">Pixel Line</option>
+            <option value="'Geist', sans-serif">Geist</option>
+        </select>
+        <label class="slider-label" for="size-slider">Size</label>
+        <input type="range" id="size-slider" class="size-slider" min="50" max="150" value="100" step="5">
+        <button class="theme-toggle" id="skills-toggle">Toggle Skills</button>
+        <button class="theme-toggle" id="theme-toggle">Toggle Theme</button>
+        <button class="screenshot-btn" id="screenshot-btn">Download Screenshot</button>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+        html.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        const skillsToggle = document.getElementById('skills-toggle');
+        const ogBottom = document.querySelector('.og-bottom');
+        ogBottom.style.display = 'none';
+
+        skillsToggle.addEventListener('click', () => {
+            const visible = ogBottom.style.display !== 'none';
+            ogBottom.style.display = visible ? 'none' : 'block';
+        });
+
+        const fontSelect = document.getElementById('font-select');
+        const ogName = document.querySelector('.og-name');
+
+        fontSelect.addEventListener('change', () => {
+            ogName.style.fontFamily = fontSelect.value;
+        });
+
+        const sizeSlider = document.getElementById('size-slider');
+        const ogPreviewEl = document.getElementById('og-preview');
+        const baseSizes = {
+            name: 8.5,
+            label: 1.4,
+            bio: 1.6,
+            url: 1.1,
+            skills: 1.05,
+            logo: 40,
+        };
+
+        sizeSlider.addEventListener('input', () => {
+            const scale = sizeSlider.value / 100;
+            ogPreviewEl.querySelector('.og-name').style.fontSize = (baseSizes.name * scale) + 'rem';
+            ogPreviewEl.querySelector('.og-label').style.fontSize = (baseSizes.label * scale) + 'rem';
+            ogPreviewEl.querySelector('.og-bio').style.fontSize = (baseSizes.bio * scale) + 'rem';
+            ogPreviewEl.querySelector('.og-url').style.fontSize = (baseSizes.url * scale) + 'rem';
+            ogPreviewEl.querySelector('.og-logo').style.height = (baseSizes.logo * scale) + 'px';
+            const skillsEl = ogPreviewEl.querySelector('.og-skills-text');
+            if (skillsEl) skillsEl.style.fontSize = (baseSizes.skills * scale) + 'rem';
+        });
+
+        const screenshotBtn = document.getElementById('screenshot-btn');
+        const preview = document.getElementById('og-preview');
+
+        screenshotBtn.addEventListener('click', async () => {
+            screenshotBtn.textContent = 'Generating...';
+            screenshotBtn.disabled = true;
+
+            // Remove any CSS transform so html2canvas captures at full 1200x630
+            const savedTransform = preview.style.transform;
+            preview.style.transform = 'none';
+
+            // Wait a frame for the layout to settle
+            await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+            try {
+                const canvas = await html2canvas(preview, {
+                    width: 1200,
+                    height: 630,
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: null,
+                    scrollX: 0,
+                    scrollY: 0,
+                });
+
+                // Restore transform
+                preview.style.transform = savedTransform;
+
+                canvas.toBlob((blob) => {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'og-image.png';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    
+                    screenshotBtn.textContent = 'Download Screenshot';
+                    screenshotBtn.disabled = false;
+                });
+            } catch (error) {
+                // Restore transform even on error
+                preview.style.transform = savedTransform;
+                console.error('Error generating screenshot:', error);
+                screenshotBtn.textContent = 'Error - Try Again';
+                screenshotBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
