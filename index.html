@@ -155,6 +155,64 @@
             </div>
         </section>
 
+        <section class="section projects" id="projects">
+            <div class="section-label">Projects</div>
+            <div class="proj-grid">
+                <a href="https://github.com/HomemadeToast57/bookbox-distributed-library" target="_blank" class="proj-card">
+                    <span class="proj-date">Aug 2023 &ndash; Dec 2023</span>
+                    <h3 class="proj-title">BookBox Distributed Library System</h3>
+                    <p class="proj-desc">A distributed library system with decentralized Raspberry Pi nodes, a Next.js web app with REST API, and Docker-containerized services to reduce book check-out times.</p>
+                    <div class="proj-tags">
+                        <span class="proj-tag">Next.js</span>
+                        <span class="proj-tag">React</span>
+                        <span class="proj-tag">PostgreSQL</span>
+                        <span class="proj-tag">Docker</span>
+                        <span class="proj-tag">Python</span>
+                    </div>
+                </a>
+                <a href="https://github.com/HomemadeToast57/spotimedia-data-science" target="_blank" class="proj-card">
+                    <span class="proj-date">Aug 2023 &ndash; Dec 2023</span>
+                    <h3 class="proj-title">Research: Musical Features &amp; Sentiment Analysis</h3>
+                    <p class="proj-desc">Applied machine learning models to analyze how tempo, key, and loudness influence user sentiment across social media. Built an interactive Next.js visualization app.</p>
+                    <div class="proj-tags">
+                        <span class="proj-tag">Python</span>
+                        <span class="proj-tag">Pandas</span>
+                        <span class="proj-tag">Next.js</span>
+                        <span class="proj-tag">ML</span>
+                    </div>
+                </a>
+                <a href="https://github.com/HomemadeToast57/unchain" target="_blank" class="proj-card">
+                    <span class="proj-date">Aug 2021 &ndash; Sep 2021</span>
+                    <h3 class="proj-title">Unchain: Addiction Recovery App</h3>
+                    <p class="proj-desc">A React + Firebase web app supporting individuals in addiction recovery with sobriety tracking, achievement milestones, and a panic button connecting to hotlines.</p>
+                    <div class="proj-tags">
+                        <span class="proj-tag">React</span>
+                        <span class="proj-tag">Firebase</span>
+                    </div>
+                </a>
+                <a href="resources/dragonfly.pdf" target="_blank" class="proj-card">
+                    <span class="proj-date">Feb 2021 &ndash; May 2021</span>
+                    <h3 class="proj-title">DragonFly: Airport Virtual Queuing</h3>
+                    <p class="proj-desc">A virtual queuing app submitted to the FAA's Airport Cooperative Research Program, projected to reduce domestic waits by 30 minutes and international waits by 1 hour.</p>
+                    <div class="proj-tags">
+                        <span class="proj-tag">Systems Design</span>
+                        <span class="proj-tag">Figma</span>
+                        <span class="proj-tag">UX Research</span>
+                    </div>
+                </a>
+                <a href="https://github.com/HomemadeToast57/repofinder" target="_blank" class="proj-card">
+                    <span class="proj-date">May 2019 &ndash; Jan 2020</span>
+                    <h3 class="proj-title">RepoFinder iOS Application</h3>
+                    <p class="proj-desc">A SwiftUI iOS app for discovering and adding jailbreaking repos. Achieved 85,000+ installs and ranked #2 trending on Packix in February 2020.</p>
+                    <div class="proj-tags">
+                        <span class="proj-tag">Swift</span>
+                        <span class="proj-tag">SwiftUI</span>
+                        <span class="proj-tag">Firebase</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <section class="section skills-section" id="skills">
             <div class="section-label">Skills</div>
             <div class="skills-flow">
@@ -180,6 +238,7 @@
     <nav class="side-nav" id="side-nav">
         <a href="#hero" class="side-nav-dot active" data-section="hero"></a>
         <a href="#experience" class="side-nav-dot" data-section="experience"></a>
+        <a href="#projects" class="side-nav-dot" data-section="projects"></a>
         <a href="#skills" class="side-nav-dot hidden" data-section="skills"></a>
     </nav>
 
@@ -273,7 +332,7 @@
 
         gsap.from(sideNav, { opacity: 0, x: 30, duration: 0.6, delay: 1.2, ease: 'power3.out' });
 
-        ['hero', 'experience', 'skills'].forEach(id => {
+        ['hero', 'experience', 'projects', 'skills'].forEach(id => {
             ScrollTrigger.create({
                 trigger: '#' + id,
                 start: 'top 50%',
