@@ -68,6 +68,7 @@ html {
     background: var(--bg);
     transition: background 0.4s ease, color 0.4s ease;
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -464,6 +465,19 @@ a.proj-card {
 
 .skill:hover {
     border-color: var(--border-hover);
+}
+
+/* ——— SCROLL REVEAL HELPERS ——— */
+.reveal-up {
+    will-change: transform, opacity;
+}
+
+.section-label {
+    will-change: transform, opacity;
+}
+
+.hero-name .line {
+    will-change: transform;
 }
 
 /* ——— FOOTER ——— */
