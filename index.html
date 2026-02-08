@@ -314,98 +314,96 @@
 
         /* ——— SECTION LABELS — slide in from left ——— */
         gsap.utils.toArray('.section-label').forEach(label => {
-            gsap.from(label, {
+            gsap.set(label, { x: -60, opacity: 0 });
+            gsap.to(label, {
                 scrollTrigger: { trigger: label, start: 'top 90%', end: 'top 60%', scrub: 1 },
-                x: -60, opacity: 0, ease: 'power2.out',
-                immediateRender: false
+                x: 0, opacity: 1, ease: 'power2.out'
             });
         });
 
         /* ——— EXPERIENCE CARDS — staggered rise with slight rotation ——— */
         gsap.utils.toArray('.exp-card').forEach((card, i) => {
-            gsap.from(card, {
+            gsap.set(card, { opacity: 0, y: 80, rotateX: 8, scale: 0.96 });
+            gsap.to(card, {
                 scrollTrigger: {
                     trigger: card,
                     start: 'top 92%',
                     end: 'top 55%',
                     scrub: 1
                 },
-                opacity: 0,
-                y: 80,
-                rotateX: 8,
-                scale: 0.96,
-                ease: 'power3.out',
-                delay: i * 0.05,
-                immediateRender: false
+                opacity: 1,
+                y: 0,
+                rotateX: 0,
+                scale: 1,
+                ease: 'power3.out'
             });
         });
 
         /* ——— PROJECT CARDS — scale up + fade from below ——— */
         gsap.utils.toArray('.proj-card').forEach((card, i) => {
-            gsap.from(card, {
+            gsap.set(card, { opacity: 0, y: 60, scale: 0.92 });
+            gsap.to(card, {
                 scrollTrigger: {
                     trigger: card,
                     start: 'top 92%',
                     end: 'top 55%',
                     scrub: 1
                 },
-                opacity: 0,
-                y: 60,
-                scale: 0.92,
-                ease: 'power2.out',
-                immediateRender: false
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                ease: 'power2.out'
             });
         });
 
         /* ——— PROJECT TAGS — stagger in per card ——— */
         gsap.utils.toArray('.proj-card').forEach(card => {
             const tags = card.querySelectorAll('.proj-tag');
-            gsap.from(tags, {
+            gsap.set(tags, { opacity: 0, y: 15 });
+            gsap.to(tags, {
                 scrollTrigger: {
                     trigger: card,
                     start: 'top 80%',
                     end: 'top 50%',
                     scrub: 1
                 },
-                opacity: 0,
-                y: 15,
+                opacity: 1,
+                y: 0,
                 stagger: 0.03,
-                ease: 'power2.out',
-                immediateRender: false
+                ease: 'power2.out'
             });
         });
 
         /* ——— SKILLS PILLS — scattered entrance ——— */
         gsap.utils.toArray('.skill').forEach((pill, i) => {
-            gsap.from(pill, {
+            gsap.set(pill, { opacity: 0, y: 40, scale: 0.8 });
+            gsap.to(pill, {
                 scrollTrigger: {
                     trigger: '.skills-flow',
                     start: 'top 90%',
                     end: 'top 50%',
                     scrub: 1
                 },
-                opacity: 0,
-                y: 40,
-                scale: 0.8,
-                stagger: 0.02,
+                opacity: 1,
+                y: 0,
+                scale: 1,
                 delay: i * 0.02,
-                ease: 'back.out(1.4)',
-                immediateRender: false
+                ease: 'back.out(1.4)'
             });
         });
 
         /* ——— FOOTER — slide up ——— */
-        gsap.from('footer', {
+        gsap.set('footer', { opacity: 0, y: 30 });
+        gsap.to('footer', {
             scrollTrigger: {
                 trigger: 'footer',
                 start: 'top 99%',
                 end: 'top 90%',
                 scrub: 1
             },
-            opacity: 0,
-            y: 30,
-            ease: 'power2.out',
-            immediateRender: false
+            opacity: 1,
+            y: 0,
+            ease: 'power2.out'
         });
 
         /* ——— BLOB PARALLAX ——— */
