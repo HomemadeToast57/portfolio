@@ -323,6 +323,29 @@ body {
     background: var(--text-secondary);
 }
 
+.inline-link {
+    color: var(--text);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.15em;
+    font-weight: 600;
+    text-decoration: none;
+    text-underline-offset: 0.18em;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.inline-link:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--text-secondary);
+}
+
+.inline-link span {
+    font-size: 0.78em;
+    line-height: 1;
+    transform: translateY(-0.08em);
+}
+
 /* ——— TYPE SHOWCASE ——— */
 .type-showcase {
     text-align: center;
