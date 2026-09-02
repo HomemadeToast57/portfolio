@@ -1,475 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack Singer</title>
-    <meta name="description" content="Software Engineer building AI products, full-stack platforms, and education technology used at scale.">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Jack Singer is a software engineer in Chicago building AI products and tools for education.">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jacksinger.dev/">
-    <meta property="og:title" content="Jack Singer - Software Engineer">
-    <meta property="og:description" content="Software Engineer building AI products, full-stack platforms, and education technology used at scale.">
+    <meta property="og:title" content="Jack Singer">
+    <meta property="og:description" content="Software engineer in Chicago building AI products and tools for education.">
     <meta property="og:image" content="https://jacksinger.dev/images/og-image.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jacksinger.dev/">
-    <meta property="twitter:title" content="Jack Singer - Software Engineer">
-    <meta property="twitter:description" content="Software Engineer building AI products, full-stack platforms, and education technology used at scale.">
-    <meta property="twitter:image" content="https://jacksinger.dev/images/og-image.png">
-    
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jack Singer">
+    <meta name="twitter:description" content="Software engineer in Chicago building AI products and tools for education.">
+    <meta name="twitter:image" content="https://jacksinger.dev/images/og-image.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/style.css">
-    <script src="https://kit.fontawesome.com/4ef6e9feb0.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons.ico/favicon-32x32.png">
 </head>
 <body>
-    <div class="blob-container">
-        <img src="images/color.png" alt="" class="blob" aria-hidden="true">
-    </div>
-
-    <nav class="nav">
-        <a href="#" class="nav-logo">
-            <img src="images/logo/J-LOGO-WHITE.svg" alt="Jack Singer" class="logo-img" id="logo-img">
-        </a>
-        <div class="nav-links">
-            <a href="mailto:jacobsinger22@gmail.com" class="nav-link">Email</a>
-            <a href="https://github.com/HomemadeToast57" target="_blank" class="nav-link">GitHub</a>
-            <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="nav-link">LinkedIn</a>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-        </div>
-    </nav>
-
     <main>
-        <section class="hero" id="hero">
-            <div class="hero-label">Software Engineer</div>
-            <h1 class="hero-name">
-                <span class="line">Jack</span>
-                <span class="line">Singer</span>
-            </h1>
-            <p class="hero-bio">
-                Building thoughtful software at scale —<br>
-                guided by design, craft, and real-world impact.
-            </p>
-            <div class="hero-links">
-                <a href="mailto:jacobsinger22@gmail.com" class="hero-link">Email</a>
-                <a href="https://github.com/HomemadeToast57" target="_blank" class="hero-link">GitHub</a>
-                <a href="https://linkedin.com/in/jacobasinger" target="_blank" class="hero-link">LinkedIn</a>
-            </div>
+        <article class="intro">
+            <header>
+                <img class="mark" src="images/logo/J-LOGO-BLACK.svg" alt="" width="20" height="30">
+                <div>
+                    <h1>Jack Singer</h1>
+                    <p>Updated Sep 1, 2026</p>
+                </div>
+            </header>
+
+            <p>I’m from Chicago, where I live with my dog, Millie.</p>
+
+            <p>I’m a Software Engineer II at <span class="link-run"><a class="company-link" href="https://codehs.com" target="_blank" rel="noopener noreferrer"><img src="data:image/x-icon;base64,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" alt="" width="14" height="14"><span>CodeHS</span></a>,</span> where I lead <span class="link-run"><a class="company-link" href="https://bool.com" target="_blank" rel="noopener noreferrer"><img src="data:image/x-icon;base64,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" alt="" width="14" height="14"><span>Bool</span></a>,</span> an AI platform that turns prompts into deployed web apps.</p>
+
+            <p>Before Bool, I built products across CodeHS, including AI Creator, the Typing Platform, CodeHS Elementary, and tools that changed how our curriculum team builds and manages content.</p>
+
+            <p>I enjoy building open-source tools and small software projects.</p>
+
+            <p>You can find me on <a href="https://x.com/jacksingerdev" target="_blank" rel="noopener noreferrer">X</a>&#8288;, <a href="https://github.com/HomemadeToast57" target="_blank" rel="noopener noreferrer">GitHub</a>&#8288;, and <a href="https://linkedin.com/in/jacobasinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>&#8288;, or reach me via <a href="mailto:jacobsinger22@gmail.com">email</a>&#8288;.</p>
+        </article>
+
+        <section class="list-section" aria-labelledby="work-heading">
+            <h2 id="work-heading">Work</h2>
+            <ul class="work-groups">
+                <li class="work-group">
+                    <p class="work-company">CodeHS</p>
+                    <ul class="work-roles">
+                        <li>
+                            <div class="list-item">
+                                <div><h3>Software Engineer II</h3></div>
+                                <time datetime="2026-02">Feb 2026 – now</time>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <div><h3>Software Engineer</h3></div>
+                                <time datetime="2024-08">Aug 2024 – Feb 2026</time>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <div><h3>Software Engineer Intern</h3></div>
+                                <time datetime="2023-06">Jun – Aug 2023</time>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </section>
 
-        <div class="marquee-wrap">
-            <div class="marquee">
-                <span>Python &mdash; Django &mdash; TypeScript &mdash; React &mdash; Next.js &mdash; Vite &mdash; Supabase &mdash; Vercel &mdash; Redis &mdash; PostgreSQL &mdash; AI SDK &mdash; Pydantic AI &mdash; MCP &mdash; Docker &mdash; AWS &mdash;&nbsp;</span>
-                <span>Python &mdash; Django &mdash; TypeScript &mdash; React &mdash; Next.js &mdash; Vite &mdash; Supabase &mdash; Vercel &mdash; Redis &mdash; PostgreSQL &mdash; AI SDK &mdash; Pydantic AI &mdash; MCP &mdash; Docker &mdash; AWS &mdash;&nbsp;</span>
-            </div>
-        </div>
-
-        <section class="section experience" id="experience">
-            <div class="section-label">Experience</div>
-            <div class="exp-grid">
-                <article class="exp-card">
-                    <div class="exp-meta">
-                        <span class="exp-place">CodeHS</span>
-                        <span class="exp-date">Feb 2026 &ndash; Present</span>
-                    </div>
-                    <h3 class="exp-title">Software Engineer II</h3>
-                    <ul class="exp-list">
-                        <li>Sole engineer on <a href="https://bool.com" target="_blank" rel="noopener noreferrer" class="inline-link">bool.com<span aria-hidden="true">↗</span></a>, an AI platform with 13k users and 16k+ projects created from prompts</li>
-                        <li>Rebuilt <a href="https://bool.com" target="_blank" rel="noopener noreferrer" class="inline-link">bool.com<span aria-hidden="true">↗</span></a> in one week as a maintainable Next.js/TypeScript app on Vercel with Supabase, Redis, and the AI SDK</li>
-                        <li>Built prompt-to-product workflows across AI chat, streaming UX, generated-app state, provisioning, custom domains, and launch controls</li>
-                        <li>Migrated 256 courses (20k+ items) from MySQL to GitHub and built export/import tooling plus a VS Code extension for curriculum workflows</li>
-                        <li>Revitalized the CodeHS API with key authentication, request tracking, and Swagger documentation across 77 operations and 37 paths</li>
-                    </ul>
-                </article>
-                <article class="exp-card">
-                    <div class="exp-meta">
-                        <span class="exp-place">CodeHS</span>
-                        <span class="exp-date">Aug 2024 &ndash; Feb 2026</span>
-                    </div>
-                    <h3 class="exp-title">Software Engineer</h3>
-                    <ul class="exp-list">
-                        <li>Worked full-stack with Django, MySQL, and React to deliver production features to a platform serving over 6M students</li>
-                        <li>Built the Typing Platform, shaping activity types, lesson flow, UX, and LMS pages for teachers and students</li>
-                        <li>Developed AI Creator and AI Chat with Python, Django, React, and Pydantic AI for content generation, tutoring, structured LLM data streaming, and validation</li>
-                        <li>Drove an AI developer workflow initiative with Claude Code, Cursor, and MCP support; increased PR throughput 88% and cut PR prep time 72%</li>
-                    </ul>
-                </article>
-                <article class="exp-card">
-                    <div class="exp-meta">
-                        <span class="exp-place">CodeHS</span>
-                        <span class="exp-date">Jun 2023 &ndash; Aug 2023</span>
-                    </div>
-                    <h3 class="exp-title">Software Engineer Intern</h3>
-                    <ul class="exp-list">
-                        <li>Developed the CodeHS Elementary Platform in Django, focusing on the LMS, Ready-to-Go lessons, and integrations with Scratch and ScratchJr</li>
-                        <li>Designed the UI/UX in Figma and implemented the frontend, delivering an accessible experience for students and teachers</li>
-                        <li>Built internal admin tools for curriculum and marketing teams, streamlining workflows and enabling faster course development</li>
-                    </ul>
-                </article>
-                <article class="exp-card" style="display: none;">
-                    <div class="exp-meta">
-                        <span class="exp-place">Binghamton University</span>
-                        <span class="exp-date">Jan 2023 &ndash; May 2024</span>
-                    </div>
-                    <h3 class="exp-title">Computer Science Course Assistant</h3>
-                    <ul class="exp-list">
-                        <li>Led weekly lab sections for CS310: Data Structures and Algorithms, guiding 200+ students through C++, data structures, and algorithm implementation</li>
-                        <li>Held office hours to provide one-on-one conceptual and technical support for students navigating challenging coursework</li>
-                        <li>Collaborated with the course instructor to refine assignments and ensure alignment with course learning objectives</li>
-                    </ul>
-                </article>
-                <article class="exp-card" style="display: none;">
-                    <div class="exp-meta">
-                        <span class="exp-place">Binghamton University</span>
-                        <span class="exp-date">Aug 2021 &ndash; May 2022</span>
-                    </div>
-                    <h3 class="exp-title">Residential Computer Consultant</h3>
-                    <ul class="exp-list">
-                        <li>Provided technical support for a residence hall housing 600+ students, troubleshooting computers, network access, and IoT issues</li>
-                        <li>Diagnosed connectivity and device issues efficiently, ensuring reliable technology access during critical academic periods</li>
-                        <li>Educated non-technical users on solutions, improving confidence in navigating common IT challenges independently</li>
-                    </ul>
-                </article>
-                <article class="exp-card" style="display: none;">
-                    <div class="exp-meta">
-                        <span class="exp-place">Binghamton University</span>
-                        <span class="exp-date">Aug 2021 &ndash; Jan 2023</span>
-                    </div>
-                    <h3 class="exp-title">Guest Service Associate</h3>
-                    <ul class="exp-list">
-                        <li>Served as first point of contact at the University Union's Guest Services Center, supporting 20,000+ students, faculty, and visitors</li>
-                        <li>Provided accurate information on transportation, facilities, and events, ensuring a positive experience for community members</li>
-                        <li>Maintained smooth center operations by efficiently coordinating inquiries and directing visitors to campus services</li>
-                    </ul>
-                </article>
-            </div>
+        <section class="list-section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Selected projects</h2>
+            <ul>
+                <li>
+                    <a class="list-item project" href="https://bool.com" target="_blank" rel="noopener noreferrer">
+                        <div><h3>Bool</h3><p>An AI platform that turns prompts into deployed React apps.</p></div>
+                        <time datetime="2026">2026</time>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-item project" href="https://github.com/HomemadeToast57/bookbox-distributed-library" target="_blank" rel="noopener noreferrer">
+                        <div><h3>BookBox</h3><p>An RFID-powered distributed library system.</p></div>
+                        <time datetime="2023">2023</time>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-item project" href="https://github.com/HomemadeToast57/repofinder" target="_blank" rel="noopener noreferrer">
+                        <div><h3>RepoFinder</h3><p>An iOS app for finding and adding jailbreak repositories.</p></div>
+                        <time datetime="2019">2019</time>
+                    </a>
+                </li>
+            </ul>
         </section>
 
-        <section class="section projects" id="projects">
-            <div class="section-label">Projects</div>
-            <div class="proj-grid">
-                <a href="https://github.com/HomemadeToast57/bookbox-distributed-library" target="_blank" class="proj-card">
-                    <span class="proj-date">Aug 2023 &ndash; Dec 2023</span>
-                    <h3 class="proj-title">BookBox Distributed Library System</h3>
-                    <p class="proj-desc">A distributed library system with decentralized Raspberry Pi nodes, a Next.js web app with REST API, and Docker-containerized services to reduce book check-out times.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Next.js</span>
-                        <span class="proj-tag">React</span>
-                        <span class="proj-tag">PostgreSQL</span>
-                        <span class="proj-tag">Docker</span>
-                        <span class="proj-tag">Python</span>
-                    </div>
-                </a>
-                <a href="https://github.com/HomemadeToast57/spotimedia-data-science" target="_blank" class="proj-card">
-                    <span class="proj-date">Aug 2023 &ndash; Dec 2023</span>
-                    <h3 class="proj-title">Research: Musical Features &amp; Sentiment Analysis</h3>
-                    <p class="proj-desc">Applied machine learning models to analyze how tempo, key, and loudness influence user sentiment across social media. Built an interactive Next.js visualization app.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Python</span>
-                        <span class="proj-tag">Pandas</span>
-                        <span class="proj-tag">Next.js</span>
-                        <span class="proj-tag">ML</span>
-                    </div>
-                </a>
-                <a href="https://github.com/HomemadeToast57/unchain" target="_blank" class="proj-card">
-                    <span class="proj-date">Aug 2021 &ndash; Sep 2021</span>
-                    <h3 class="proj-title">Unchain: Addiction Recovery App</h3>
-                    <p class="proj-desc">A React + Firebase web app supporting individuals in addiction recovery with sobriety tracking, achievement milestones, and a panic button connecting to hotlines.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">React</span>
-                        <span class="proj-tag">Firebase</span>
-                    </div>
-                </a>
-                <a href="resources/dragonfly.pdf" target="_blank" class="proj-card">
-                    <span class="proj-date">Feb 2021 &ndash; May 2021</span>
-                    <h3 class="proj-title">DragonFly: Airport Virtual Queuing</h3>
-                    <p class="proj-desc">A virtual queuing app submitted to the FAA's Airport Cooperative Research Program, projected to reduce domestic waits by 30 minutes and international waits by 1 hour.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Systems Design</span>
-                        <span class="proj-tag">Figma</span>
-                        <span class="proj-tag">UX Research</span>
-                    </div>
-                </a>
-                <a href="https://github.com/HomemadeToast57/repofinder" target="_blank" class="proj-card">
-                    <span class="proj-date">May 2019 &ndash; Jan 2020</span>
-                    <h3 class="proj-title">RepoFinder iOS Application</h3>
-                    <p class="proj-desc">A SwiftUI iOS app for discovering and adding jailbreaking repos. Achieved 85,000+ installs and ranked #2 trending on Packix in February 2020.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Swift</span>
-                        <span class="proj-tag">SwiftUI</span>
-                        <span class="proj-tag">Firebase</span>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section class="section skills-section" id="skills">
-            <div class="section-label">Skills</div>
-            <div class="skills-flow">
-                <span class="skill">Python</span>
-                <span class="skill">Django</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">TypeScript</span>
-                <span class="skill">React</span>
-                <span class="skill">Next.js</span>
-                <span class="skill">Vite</span>
-                <span class="skill">Node.js</span>
-                <span class="skill">Supabase</span>
-                <span class="skill">Vercel</span>
-                <span class="skill">Redis</span>
-                <span class="skill">PostgreSQL</span>
-                <span class="skill">Pydantic AI</span>
-                <span class="skill">AI SDK</span>
-                <span class="skill">MCP</span>
-                <span class="skill">Docker</span>
-                <span class="skill">AWS</span>
-                <span class="skill">Figma</span>
-                <span class="skill">Unix</span>
-                <span class="skill">REST API</span>
-                <span class="skill">Git/GitHub</span>
-                <span class="skill">Tailwind</span>
-            </div>
-        </section>
     </main>
 
-    <nav class="side-nav" id="side-nav">
-        <a href="#hero" class="side-nav-dot active" data-section="hero"></a>
-        <a href="#experience" class="side-nav-dot" data-section="experience"></a>
-        <a href="#projects" class="side-nav-dot" data-section="projects"></a>
-        <a href="#skills" class="side-nav-dot hidden" data-section="skills"></a>
-    </nav>
-
     <footer>
-        <div class="footer-left">
-            <span class="footer-name">Jack Singer</span>
-            <span class="footer-loc">Chicago, IL</span>
-        </div>
-        <div class="footer-right">
-            <a href="mailto:jacobsinger22@gmail.com">Email</a>
-            <a href="https://github.com/HomemadeToast57" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/jacobasinger" target="_blank">LinkedIn</a>
-        </div>
+        <p><time id="chicago-time">Chicago, Illinois</time></p>
     </footer>
-
-
-
+    <div class="scroll-fade" aria-hidden="true"></div>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        const heroName = document.querySelector('.hero-name');
-        heroName.style.fontFamily = "'Geist', sans-serif";
-
-        /* ——— MARQUEE SPEED SHIFT ON SCROLL ——— */
-        const marqueeEl = document.querySelector('.marquee');
-        gsap.to(marqueeEl, {
-            scrollTrigger: {
-                trigger: '.marquee-wrap',
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 0.5
-            },
-            x: '-=300',
-            ease: 'none'
+        const chicagoTime = document.getElementById("chicago-time");
+        const chicagoTimeFormatter = new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/Chicago",
+            hour: "numeric",
+            minute: "2-digit"
         });
 
-        /* ——— FONT PULSE ——— */
-        const pixelFonts = [
-            "'Geist Pixel Square'",
-            "'Geist Pixel Grid'",
-            "'Geist Pixel Circle'",
-            "'Geist Pixel Triangle'",
-            "'Geist Pixel Line'"
-        ];
-
-        function fontPulse() {
-            const pick = pixelFonts[Math.floor(Math.random() * pixelFonts.length)];
-            gsap.to(heroName, {
-                opacity: 0, duration: 0.25, ease: 'power2.in',
-                onComplete: () => {
-                    heroName.style.fontFamily = pick + ', monospace';
-                    gsap.to(heroName, {
-                        opacity: 1, duration: 0.3, ease: 'power2.out',
-                        onComplete: () => {
-                            gsap.delayedCall(1.5, () => {
-                                gsap.to(heroName, {
-                                    opacity: 0, duration: 0.25, ease: 'power2.in',
-                                    onComplete: () => {
-                                        heroName.style.fontFamily = "'Geist', sans-serif";
-                                        gsap.to(heroName, {
-                                            opacity: 1, duration: 0.3, ease: 'power2.out',
-                                            onComplete: () => gsap.delayedCall(3 + Math.random() * 3, fontPulse)
-                                        });
-                                    }
-                                });
-                            });
-                        }
-                    });
-                }
-            });
-        }
-        gsap.delayedCall(2.5, fontPulse);
-
-        /* ——— SECTION LABELS — slide in from left ——— */
-        gsap.utils.toArray('.section-label').forEach(label => {
-            gsap.set(label, { x: -60, opacity: 0 });
-            gsap.to(label, {
-                scrollTrigger: { trigger: label, start: 'top 90%', end: 'top 60%', scrub: 1 },
-                x: 0, opacity: 1, ease: 'power2.out'
-            });
-        });
-
-        /* ——— EXPERIENCE CARDS — staggered rise with slight rotation ——— */
-        gsap.utils.toArray('.exp-card').forEach((card, i) => {
-            gsap.set(card, { opacity: 0, y: 80, rotateX: 8, scale: 0.96 });
-            gsap.to(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 92%',
-                    end: 'top 55%',
-                    scrub: 1
-                },
-                opacity: 1,
-                y: 0,
-                rotateX: 0,
-                scale: 1,
-                ease: 'power3.out'
-            });
-        });
-
-        /* ——— PROJECT CARDS — scale up + fade from below ——— */
-        gsap.utils.toArray('.proj-card').forEach((card, i) => {
-            gsap.set(card, { opacity: 0, y: 60, scale: 0.92 });
-            gsap.to(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 92%',
-                    end: 'top 55%',
-                    scrub: 1
-                },
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                ease: 'power2.out'
-            });
-        });
-
-        /* ——— PROJECT TAGS — stagger in per card ——— */
-        gsap.utils.toArray('.proj-card').forEach(card => {
-            const tags = card.querySelectorAll('.proj-tag');
-            gsap.set(tags, { opacity: 0, y: 15 });
-            gsap.to(tags, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 80%',
-                    end: 'top 50%',
-                    scrub: 1
-                },
-                opacity: 1,
-                y: 0,
-                stagger: 0.03,
-                ease: 'power2.out'
-            });
-        });
-
-        /* ——— SKILLS PILLS — scattered entrance ——— */
-        gsap.utils.toArray('.skill').forEach((pill, i) => {
-            gsap.set(pill, { opacity: 0, y: 40, scale: 0.8 });
-            gsap.to(pill, {
-                scrollTrigger: {
-                    trigger: '.skills-flow',
-                    start: 'top 90%',
-                    end: 'top 50%',
-                    scrub: 1
-                },
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                delay: i * 0.02,
-                ease: 'back.out(1.4)'
-            });
-        });
-
-        /* ——— FOOTER — slide up ——— */
-        gsap.set('footer', { opacity: 0, y: 30 });
-        gsap.to('footer', {
-            scrollTrigger: {
-                trigger: 'footer',
-                start: 'top 99%',
-                end: 'top 90%',
-                scrub: 1
-            },
-            opacity: 1,
-            y: 0,
-            ease: 'power2.out'
-        });
-
-        /* ——— BLOB PARALLAX ——— */
-        gsap.to('.blob', {
-            scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: true },
-            y: -200, rotation: 180, ease: 'none'
-        });
-
-        /* ——— SIDE NAV ——— */
-        const sideNav = document.getElementById('side-nav');
-        const sideNavLinks = document.querySelectorAll('.side-nav-dot');
-
-        gsap.from(sideNav, { opacity: 0, x: 30, duration: 0.6, delay: 1.2, ease: 'power3.out' });
-
-        ['hero', 'experience', 'projects', 'skills'].forEach(id => {
-            ScrollTrigger.create({
-                trigger: '#' + id,
-                start: 'top 50%',
-                end: 'bottom 50%',
-                onEnter: () => setActiveNav(id),
-                onEnterBack: () => setActiveNav(id)
-            });
-        });
-
-        const skillsDot = document.querySelector('.side-nav-dot[data-section="skills"]');
-        ScrollTrigger.create({
-            trigger: '#skills',
-            start: 'top 90%',
-            onEnter: () => skillsDot.classList.remove('hidden'),
-            onLeaveBack: () => {
-                if (!skillsDot.classList.contains('active')) skillsDot.classList.add('hidden');
-            }
-        });
-
-        function setActiveNav(id) {
-            sideNavLinks.forEach(link => link.classList.toggle('active', link.dataset.section === id));
+        function updateChicagoTime() {
+            const now = new Date();
+            chicagoTime.textContent = `${chicagoTimeFormatter.format(now).toLowerCase()} in Chicago, Illinois`;
+            chicagoTime.dateTime = now.toISOString();
         }
 
-        /* ——— THEME TOGGLE ——— */
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        const icon = themeToggle.querySelector('i');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
-        html.setAttribute('data-theme', savedTheme);
-        updateIcon(savedTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme);
-        });
-
-        function updateIcon(theme) {
-            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-        }
+        updateChicagoTime();
+        window.setInterval(updateChicagoTime, 30000);
     </script>
 </body>
 </html>
